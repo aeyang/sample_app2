@@ -29,14 +29,14 @@ gem 'jquery-rails'
 
  group :development do
    gem 'sqlite3'
-   gem 'rspec-rails','2.0.1'
+   gem 'rspec-rails','2.6.1.beta1'
    gem 'therubyracer-heroku', '0.8.1.pre3'
    gem 'therubyracer'
  end
 
  group :test do
   gem 'sqlite3'
-  gem 'rspec','2.0.1'
+  gem 'rspec','2.6'
   gem 'webrat','0.7.1'
  end
 
