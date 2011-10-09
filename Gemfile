@@ -36,6 +36,8 @@ gem 'jquery-rails'
 
  group :test do
   gem 'rspec','2.6'
+  gem 'ZenTest'
+  gem 'test_notifier'
   gem 'webrat','0.7.1'
  end
 

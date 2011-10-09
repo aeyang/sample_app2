@@ -6,6 +6,7 @@ describe PagesController do
   before(:each) do
     @base_title = "Ruby on Rails Tutorial Sample App"
   end
+
   describe "GET 'home'" do
     it "should be successful" do
       get 'home'
@@ -20,6 +21,7 @@ describe PagesController do
     it "should have a non-blank body" do
       get 'home'
       response.body.should_not =~ /<body>\s*<\/body>/
+    end
   end
 
   describe "GET 'contact'" do
@@ -45,4 +47,5 @@ describe "GET 'about'" do
       response.should have_selector("title", :content => "#{@base_title} | About")
     end
   end
+
 end
