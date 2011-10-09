@@ -5,9 +5,8 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'rake', '0.8.7'
-
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,12 +28,18 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
  group :development do
+   gem 'sqlite3'
    gem 'rspec-rails','2.0.1'
    gem 'therubyracer-heroku', '0.8.1.pre3'
    gem 'therubyracer'
  end
 
  group :test do
+  gem 'sqlite3'
   gem 'rspec','2.0.1'
   gem 'webrat','0.7.1'
  end
+
+group :production do
+ gem 'pg' 
+end
