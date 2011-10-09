@@ -6,8 +6,6 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'rake'
-gem 'pg'
-gem 'sqlite3', '1.3.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,9 +27,10 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
  group :development do
+   gem 'sqlite3', '1.3.4'
    gem 'rspec-rails','2.6.1.beta1'
-   gem 'therubyracer-heroku', '0.8.1.pre3'
-   gem 'therubyracer'
+   #gem 'therubyracer-heroku', '0.8.1.pre3'
+   #gem 'therubyracer'
    gem 'annotate'
  end
 
