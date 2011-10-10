@@ -1,7 +1,18 @@
-<h1>
-<!-- You can pass in options to the gravatar as the second argument like :size => 100 -->
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+         <!-- You can pass in options to the gravatar as the second argument like :size => 100 -->
+         <%= gravatar_for(@user, :size => 100) %> 
+         <%= @user.name %> 
+      </h1>
+    </td>
+    <td class="sidebar round">
+       <strong>Name</strong> <%= @user.name %><br />
+       <strong>URL</strong> <%= link_to user_path(@user), @user%>
 
-<%= gravatar_for(@user, :size => 100) %> 
-<%= @user.name %> 
+    </td>
 
-</h1>
+</table>
+
+
