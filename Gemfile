@@ -31,6 +31,7 @@ gem 'gravatar_image_tag'
    gem 'rspec-rails','2.6.1.beta1'
    #gem 'therubyracer-heroku', '0.8.1.pre3'
    #gem 'therubyracer'
+   gem 'guard-rspec'
    gem 'annotate'
  end
 
