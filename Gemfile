@@ -16,7 +16,7 @@ gem 'rake'
 #end
 
 gem 'jquery-rails'
-
+gem 'gravatar_image_tag'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -39,6 +39,7 @@ gem 'jquery-rails'
   gem 'ZenTest'
   gem 'test_notifier'
   gem 'webrat','0.7.1'
+  gem 'factory_girl_rails'
  end
 
 group :production do

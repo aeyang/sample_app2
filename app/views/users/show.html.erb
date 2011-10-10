@@ -1,1 +1,7 @@
-<%= @user.name %>, <%= @user.email %>
+<h1>
+<!-- You can pass in options to the gravatar as the second argument like :size => 100 -->
+
+<%= gravatar_for(@user, :size => 100) %> 
+<%= @user.name %> 
+
+</h1>
