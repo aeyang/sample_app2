@@ -30,7 +30,15 @@ module SessionsHelper
 
   #check if user is signed in
   def signed_in?
-    !@current_user.nil?
+    #Why current_user and not @current_user??? what is the difference?
+    !current_user.nil?
+  end
+
+  #signing out 
+  def sign_out
+  	#delete the cookie
+  	cookies.delete(:remember_token)
+  	current_user = nil
   end
 
   private
