@@ -31,6 +31,12 @@ class User < ActiveRecord::Base
        return nil if user.nil?
        return user if user.has_password?(submitted_password)
     end
+    
+    #Class method for session authentication to use. Compares User cookie data with Db data for match
+    def self.authenticate_with_salt(id, cookie_salt)
+      user = find_by_id(id)
+      (user && user.salt == cookie_salt) ? user : nil
+    end
 
     #private method
     private 
@@ -55,6 +61,7 @@ class User < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -65,5 +72,6 @@ end
 #  created_at         :datetime
 #  updated_at         :datetime
 #  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
