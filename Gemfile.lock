@@ -110,6 +110,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
+    spork (0.8.5)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -145,6 +146,7 @@ DEPENDENCIES
   rake
   rspec (= 2.6)
   rspec-rails (= 2.6.1.beta1)
+  spork
   sqlite3 (= 1.3.4)
   test_notifier
   webrat (= 0.7.1)

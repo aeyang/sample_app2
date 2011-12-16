@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   def new
   	@user = User.new
   	@title = "Sign up"
@@ -11,12 +12,29 @@ class UsersController < ApplicationController
 
   def create
   	@user = User.new(params[:user])
+  	
   	if @user.save
-      sign_in @user
-  		redirect_to @user, :flash => {:success => "Welcome to the Sample App!"}
+          sign_in @user
+  	  redirect_to @user, :flash => {:success => "Welcome to the Sample App!"}
   	else	
-  	   @title = 'Sign up'
-  	   render 'new'
+  	  @title = 'Sign up'
+  	  render 'new'
   	end
+  end
+  
+  def edit
+    @user = User.find(params[:id])
+    @title = "Edit User" 
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    
+    if @user.update_attributes(params[:user])
+      redirect_to @user, :flash => {:success => "User Successfully updated!"}
+    else
+      @title = "Edit User"
+      render 'edit'
+    end
   end
 end
