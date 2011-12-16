@@ -17,7 +17,6 @@ gem 'spork'
 
 gem 'jquery-rails'
 gem 'gravatar_image_tag'
-gem 'therubyracer'
 #gem 'execjs'
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,9 +28,10 @@ gem 'therubyracer'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
  group :assets do
-#   gem 'sass-rails', '~> 3.1.4'
+   gem 'therubyracer'
+   gem 'sass-rails', '~> 3.1.4'
    gem 'coffee-rails', '~> 3.1.1'
-#   gem 'uglifier', '>= 1.0.3'
+   gem 'uglifier', '>= 1.0.3'
  end
 
  group :development do
