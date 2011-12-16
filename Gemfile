@@ -29,10 +29,10 @@ gem 'gravatar_image_tag'
  group :development do
    gem 'sqlite3', '1.3.4'
    gem 'rspec-rails','2.6.1.beta1'
-   #gem 'therubyracer-heroku', '0.8.1.pre3'
-   #gem 'therubyracer'
    gem 'guard-rspec'
    gem 'annotate'
+   gem 'faker', '0.3.1'
+   gem 'will_paginate', '3.0.pre2'
  end
 
  group :test do
