@@ -9,6 +9,7 @@ module SessionsHelper
 
     #current_user= is a functino
     current_user = user;
+    @current_user = user;
   end
 
   #setter method for instance variable: current_user
@@ -38,7 +39,8 @@ module SessionsHelper
   def sign_out
   	#delete the cookie
   	cookies.delete(:remember_token)
-  	current_user = nil
+  	self.current_user = nil
+  	@current_user = nil
   end
   
   #Used in Users controller
