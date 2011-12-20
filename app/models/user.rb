@@ -2,8 +2,12 @@ class User < ActiveRecord::Base
 	attr_accessor   :password
 	attr_accessible :name, :email, :password, :password_confirmation
 	#put anything that is received from the web in attr_accessible
+	
+	#has_many and others are just methods, you can do without the parens
+	#:dependent => :destroy means destroy microposts when user is destroyed
+	has_many :microposts, :dependent => :destroy
     
-    email_regex = /\A[\w+.\-]+@[a-z.\d\-]+\.[a-z]+\z/i
+        email_regex = /\A[\w+.\-]+@[a-z.\d\-]+\.[a-z]+\z/i
 
 	validates :name, :presence => true, 
 	                 :length => { :maximum => 50 }
