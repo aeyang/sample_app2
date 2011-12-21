@@ -3,6 +3,10 @@ class Micropost < ActiveRecord::Base
   
   belongs_to :user
   
+  #:presence enforces "non-blank" content. :length is self explanatory
+  validates :content, :presence => true, :length => { :maximum => 140 }
+  validates :user_id, :presence => true
+  
   #Setting up the order. Like SQL order by DESC command
   default_scope :order => 'microposts.created_at DESC'
 end
