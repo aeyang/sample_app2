@@ -29,6 +29,12 @@ class User < ActiveRecord::Base
        encrypted_password == encrypt(submitted_password)
     end
 
+    def feed
+	#New Rails 3 syntax: a conditional find, pretty neat
+	#Does a "SELECT microposts FROM microposts WHERE (user_id = 1) ORDER BY microposts.created_at DESC"
+        Micropost.where("user_id = ?", self.id)
+    end
+    
     #Class Method
     def self.authenticate(email, submitted_password)
        user = find_by_email(email) #Can omit 'User'.find_by_email since we are in the User class already
