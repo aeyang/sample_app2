@@ -1,8 +1,10 @@
 SampleApp::Application.routes.draw do
 
+  #this makes action/routes for the 7 canonical routes
   resources :users
-  #get "users/new", "users/show"
+  #here, we only want three routes
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :microposts, :only => [:create, :destroy]
 
   root :to => 'pages#home'
   match '/contact', :to => 'pages#contact'
