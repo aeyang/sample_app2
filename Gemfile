@@ -52,7 +52,8 @@ gem 'gravatar_image_tag'
  end
 
 group :production do
- gem 'pg' 
- gem 'therubyracer'
- gem 'will_paginate','3.0.pre2'
+  gem 'pg' 
+  gem 'therubyracer'
+  gem 'will_paginate','3.0.pre2'
+  gem 'faker','0.3.1'
 end
